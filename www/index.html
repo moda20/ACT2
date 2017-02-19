@@ -18,71 +18,196 @@
     under the License.
 -->
 <html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <script src="js/jquery-2.0.0.min.js"></script>
-        <script src="js/jquery.mobile-1.4.5.min.js"></script>
-        <script src="js/index.js"></script>
-        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
-        <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css">
-        <title>Hello World</title>
-    </head>
-    <body>
+<head>
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+    Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <script src="js/jquery-2.0.0.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/CSSFIRSTVERSION.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<div data-role="panel" id="SideMenu" data-position="left" data-display="overlay" data-theme="a">
+    <ul data-role="listview" data-inset="false">
+        <li data-icon="home"><a href="#">Home</a></li>
+        <li data-icon="gear"><a href="">Application settings</a></li>
+        <li data-icon="info" data-role="list-divider">Quick Navigation</li>
+        <li data-icon="false"><a href="#">Me</a></li>
+        <li data-icon="false"><a href="#">Friends</a></li>
+        <li data-icon="false"><a href="#">Matches</a></li>
+    </ul>
+</div>
+<div data-role="page" id="HM" data-theme="b">
 
+    <div data-role="header">
+        <a href="#SideMenu" data-icon="bars" data-iconpos="notext" style="border: none;"></a>
+        <h1>Welcome</h1>
+        <a href="" data-icon="carat-l" data-rel="back" data-iconpos="notext" style="border: none;"></a>
+    </div>
 
+    <div role="main" class="ui-content">
+        <div class="ui-grid-b ui-responsive">
+            <div class="ui-block-a" style="width: 10%"></div>
 
-
-    <div data-role="page" id="st">
-
-        <div data-role="header">
-            <a href="" data-icon="home">Home</a>
-            <h1>Single page</h1>
-            <a href="" data-icon="arrow-r">Previous</a>
-        </div><!-- /header -->
-
-        <div role="main" class="ui-content">
-            <div class="">
-                First page
-                <p> <a href="#" id="gotop2" class="ui-btn ui-shadow ui-corner-all">Click me to show page 2</a> </p>
-                <p> <a href="#nd" class="ui-btn ui-shadow ui-corner-all">Won't work</a> </p>
+            <div class="ui-block-b"><img src="" class="bigimg"></div>
+            <div class="ui-block-c" style="width: 10%"></div>
+        </div><br>
+        <div class="ui-grid-a">
+            <div class="ui-block-a" style="width:80%;">
+                <input id="connect" type="button" data-icon="carat-r" value="Get in" data-theme="a">
             </div>
-        </div><!-- /content -->
-
-        <div data-role="footer">
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#CT">Contact</a></li>
-                    <li><a href="#EMP">Emplacement</a></li>
-                    <li><a href="#APS">A propos</a></li>
-                </ul>
+            <div class="ui-block-b" style="width:20%; padding: 2%; padding-left: 3%;">
+                <input id="OpGear" data-inline="true" type="button" data-icon="gear" data-iconpos="notext" data-rel="popup" data-theme="b" style="border: none;">
             </div>
-        </div><!-- /footer -->
+        </div>
+        <input type="button" id="ThisIsNotMe" data-icon="carat-r" value="This is not me">
+    </div>
 
-    </div><!-- /page -->
-    <div data-role="page" id="nd">
-        <div data-role="header">
-            <h1> second Page</h1>
+    <div data-role="footer" data-position="fixed" style="padding: 0;">
+        <div class="ui-grid-b" style="">
+            <div class="ui-block-a" style="width: 20%; padding-top: 0.5%; padding-left: 0.5%; padding-bottom: 0;">
+                <img class="smallimg" src="" name="profileImg" style="">
+            </div>
+            <div class="ui-block-b" style="width: 60%;">
+                <div name="UserName">YOUR NAME HERE</div>
+                <div name="LastActivity">LAST VALIDATED ACTIVITY</div>
+            </div>
+            <div class="ui-block-c" style="width: 20%;">
+                <input type="button" data-iconpos="notext" data-icon="alert" class="NotificationAlertON" style="border: none;">
+            </div>
         </div>
-        <div role="main" class="ui-content">
-            <p> This is the Second page to show </p>
-            <p> <a href="#st" id="goback" class="ui-btn ui-shadow ui-corner-all"> Click here to go to one</a></p>
+    </div>
+    <div data-role="popup" id="LoginOptions" data-position-to="window">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;">
+            <li data-role="list-divider">Choose an Option</li>
+            <li><a href="#">Reset Password</a></li>
+            <li><a href="#">Reset UserName</a></li>
+            <li><input type="checkbox" name="RememberMe" id="RememberMe">
+                <label for="RememberMe">RememberMe</label>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<div data-role="page" id="Login"  data-theme="b">
+    <div data-role="header">
+        <a href="#SideMenu" data-icon="bars" data-iconpos="notext" style="border: none;"></a>
+        <h1>Logging In</h1>
+        <a href="" data-icon="carat-l" data-rel="back" data-iconpos="notext" style="border: none;"></a>
+    </div>
+    <div role="main" class="ui-content">
+        <!-- <form> method="post" action=""-->
+        <label for="UserNameInput"><h3>UserName</h3></label>
+        <input id="UserNameInput" type="text" name="UserNameInput">
+        <label for="PasswordInput"><h3>Password</h3></label>
+        <input id="PasswordInput" type="password" name="PasswordInput">
+        <input type="submit" id="SubmitLogin" name="SubmitLogin" data-icon="check" value="Sign In" data-iconpos="right" data-theme="e">
+        <input type="button" value="Register with us" id="RegisterButton" name="RegisterButton" data-icon="edit" data-iconpos="right" data-theme="b">
+        <!-- </form>-->
+    </div>
+    <div data-role="footer" data-position="fixed" style="padding: 0;">
+        <div class="ui-grid-b" style="">
+            <div class="ui-block-a" style="width: 20%; padding-top: 0.5%; padding-left: 0.5%; padding-bottom: 0;">
+                <img class="smallimg" src="" name="profileImg" style="">
+            </div>
+            <div class="ui-block-b" style="width: 60%;">
+                <div name="UserName" class="SSP">YOUR NAME HERE</div>
+                <div name="LastActivity" class="SSP">LAST VALIDATED ACTIVITY</div>
+            </div>
+            <div class="ui-block-c" style="width: 20%;">
+                <input type="button" data-iconpos="notext" data-icon="alert" class="NotificationAlertON" style="border: none;">
+            </div>
         </div>
+    </div>
+
+</div>
+<div data-role="page" id="Home" data-theme="b">
+    <div data-role="header">
+        <a href="#SideMenu" data-icon="bars" data-iconpos="notext" style="border: none;"></a>
+        <h1>Your Matches</h1>
+        <a href="" data-icon="carat-l" data-rel="back" data-iconpos="notext" style="border: none;"></a>
+    </div>
+    <div role="main" class="ui-content">
+        <div data-role="collapsible" data-inset="false" id="matchesyoucanjoin">
+            <h3>Near Matches you can Join</h3>
+            <ul data-role="listview">
+                <li><a href="#" >Soduko match in Seattle</a></li>
+                <li><a href="#" >League Championship in Seattle</a></li>
+                <li><a href="#" >Table Tennis with Jake</a></li>
+                <li><input type="button" data-icon="plus" data-theme="b" value="Add New Matches"/></li>
+            </ul>
+        </div>
+        <div data-role="collapsible" data-inset="false" id="missedmatches" data-content-theme="b">
+            <h3>You missed<span id="MatchesyouMissed"> X </span>Matches</h3>
+            <ul data-role="listview">
+                <li><a href="#" class="MissedMatch">A scrabble Match with Jane</a></li>
+                <li><a href="#" class="MissedMatch">Annual Tea Party</a></li>
+                <p class="SSP backtext displayhidden" id="nomissedmatchnotice">You didn't miss any Match today</p>
+                <li><input id="DiscardAll" type="button" data-icon="delete" data-theme="a" value="Discard All"/></li>
+            </ul>
+        </div>
+        <div data-role="collapsible" data-inset="false" id="matchesyouareinvitedto">
+            <h3>Matches you are invited to </h3>
+            <ul data-role="listview">
+                <li><a href="#" data-icon="carat-r" data-theme="a">LOL Training session N°13</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" style="padding: 0;">
+        <div class="ui-grid-b" style="">
+            <div class="ui-block-a" style="width: 20%; padding-top: 0.5%; padding-left: 0.5%; padding-bottom: 0;">
+                <img class="smallimg" src="" name="profileImg" style="">
+            </div>
+            <div class="ui-block-b" style="width: 60%;">
+                <div name="UserName" class="SSP">YOUR NAME HERE</div>
+                <div name="LastActivity" class="SSP">LAST VALIDATED ACTIVITY</div>
+            </div>
+            <div class="ui-block-c" style="width: 20%;">
+                <input type="button" data-iconpos="notext" data-icon="alert" class="NotificationAlertON" style="border: none;">
+            </div>
+        </div>
+    </div>
+</div>
+<div data-role="page" id="APS">
+    <div data-role="header">
+        <a href="#HM" data-icon="home" data-theme="b">Home</a>
+        <h1>A propos</h1>
+        <a href="" data-icon="arrow-r" data-rel="back">Previous</a>
+    </div>
+    <div role="main" class="ui-content">
+        <!--            <p> This is the Second page to show </p>
+                    <p> <a href="#st" id="goback" class="ui-btn ui-shadow ui-corner-all"> Click here to go to one</a></p>-->
+        <div><span >Version : </span><span data-inline="true" id="version">0</span></div>
+        <div><span >Système : </span><span id="Système">Android</span></div>
+        <div><span >Auteur : </span><span id="Auteur">MR X=10</span></div>
+        <div><span >Page Web : </span><span id="Page"><a href="#">www.mapage.com</a></span></div>
 
     </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#CT">Contact</a></li>
+                <li><a href="#EMP">Emplacement</a></li>
+                <li><a href="#APS">A propos</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
 </html>

@@ -22,6 +22,9 @@
  */
 
 $(function () {
+    $(function () {
+        $("[data-role=panel]").enhanceWithin().panel();
+    });
     $( "#gotop2" ).on('click',function( event ) {
         console.log("RRRRRR")
         $.mobile.navigate( "#nd", {
@@ -56,6 +59,35 @@ $(function () {
             console.log( data.state.hash );
         });
         window.history.back();
-    })
+    });
+
+    $("#ThisIsNotMe").on('click', function(event){
+        $.mobile.navigate("#Login",{
+        });
+    });
+    $("#OpGear").on('click', function(event){
+        $( "#LoginOptions" ).popup();
+        console.log("AFTER POPUP");
+        $("#LoginOptions").popup("open");
+    });
+
+    $("#SubmitLogin").on('click',function (event) {
+        $.mobile.navigate("#Home",{
+            Login: "Direct"
+        });
+    });
+    $("#DiscardAll").on('click',function (event) {
+       $(".MissedMatch").remove();
+        $("#DiscardAll").parent().hide("fast",function () {
+            console.log("HIDDING");
+            $("#nomissedmatchnotice").toggleClass("displayhidden",false);
+        });
+    });
+    $( "#SideMenu" ).panel({
+        theme: "a"
+    });
+
 });
+
+
 
