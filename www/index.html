@@ -42,6 +42,10 @@
 </head>
 <body>
 <div data-role="panel" id="SideMenu" data-position="left" data-display="overlay" data-theme="a">
+    <div class="miniInfo">
+        <img src="" class="miniimg">
+        <h3>Your name here</h3>
+    </div>
     <ul data-role="listview" data-inset="false">
         <li data-icon="home"><a href="#">Home</a></li>
         <li data-icon="gear"><a href="">Application settings</a></li>
@@ -142,7 +146,7 @@
         <a href="" data-icon="carat-l" data-rel="back" data-iconpos="notext" style="border: none;"></a>
     </div>
     <div role="main" class="ui-content">
-        <div data-role="collapsible" data-inset="false" id="matchesyoucanjoin">
+        <div data-role="collapsible" data-inset="false" id="matchesyoucanjoin" data-content-theme="f" data-theme="d">
             <h3>Near Matches you can Join</h3>
             <ul data-role="listview">
                 <li><a href="#" >Soduko match in Seattle</a></li>
@@ -151,7 +155,7 @@
                 <li><input type="button" data-icon="plus" data-theme="e" value="Add New Matches"/></li>
             </ul>
         </div>
-        <div data-role="collapsible" data-inset="false" id="missedmatches" data-content-theme="d" data-theme="b">
+        <div data-role="collapsible" data-inset="false" id="missedmatches" data-content-theme="f" data-theme="d">
             <h3>You missed<span id="MatchesyouMissed"> X </span>Matches</h3>
             <ul data-role="listview">
                 <li><a href="#" class="MissedMatch">A scrabble Match with Jane</a></li>
@@ -160,14 +164,17 @@
                 <li><input id="DiscardAll" type="button" data-icon="delete" data-theme="a" value="Discard All"/></li>
             </ul>
         </div>
-        <div data-role="collapsible" data-inset="false" id="matchesyouareinvitedto">
+        <div data-role="collapsible" data-inset="false" id="matchesyouareinvitedto" data-theme="d" data-content-theme="f">
             <h3>Matches you are invited to </h3>
             <ul data-role="listview">
-                <li><a href="#1" data-icon="carat-r" data-theme="a" data-rel="popup" data-position-to="origin" data-transition="pop">LOL Training session N°13</a><div id="1" data-role="popup" name="CPanel" class="Cpanel"  data-theme="b"><div data-role="controlgroup" data-type="horizontal">
-                    <input type="button" value="Decilne"  data-theme="a">
-                    <input type="button"  data-theme="e" value="More">
-                </div>
-                </div></li>
+                <li><a href="#1" data-icon="carat-r" data-theme="a" data-rel="popup" data-position-to="origin" data-transition="pop">LOL Training session N°13</a>
+                    <div id="1" data-role="popup" name="CPanel" class="Cpanel"  data-theme="b" style="padding: 0; margin: 0;">
+                        <div data-role="controlgroup" data-type="horizontal" style="padding: 0; margin: 0;width: 100%;">
+                            <input type="button" value="Decilne"  data-theme="a">
+                            <input type="button"  data-theme="e" value="More">
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>

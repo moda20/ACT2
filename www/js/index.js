@@ -84,10 +84,10 @@ $(function () {
         });
     });
     $( "#SideMenu" ).panel({
-        theme: "a"
+        theme: "b"
     });
-    $("#matchesyoumissed").$("ul").$("li").on("swipeleft swiperight",function (event) {
-        
-    })
+/*    $("#matchesyoumissed").$("ul").$("li").on("swipeleft swiperight",function (event) {
+
+    })*/
 
 });
