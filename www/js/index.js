@@ -77,7 +77,7 @@ $(function () {
         });
     });
     $("#DiscardAll").on('click',function (event) {
-       $(".MissedMatch").remove();
+        $(".MissedMatch").remove();
         $("#DiscardAll").parent().hide("fast",function () {
             console.log("HIDDING");
             $("#nomissedmatchnotice").toggleClass("displayhidden",false);
@@ -88,6 +88,3 @@ $(function () {
     });
 
 });
-
-
-
