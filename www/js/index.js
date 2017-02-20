@@ -86,5 +86,8 @@ $(function () {
     $( "#SideMenu" ).panel({
         theme: "a"
     });
+    $("#matchesyoumissed").$("ul").$("li").on("swipeleft swiperight",function (event) {
+        
+    })
 
 });
