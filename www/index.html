@@ -50,7 +50,7 @@
         <li data-icon="home"><a href="#">Home</a></li>
         <li data-icon="gear"><a href="">Application settings</a></li>
         <li data-icon="info" data-role="list-divider">Quick Navigation</li>
-        <li data-icon="false"><a href="#">Me</a></li>
+        <li data-icon="false"><a href="#Profile">Me</a></li>
         <li data-icon="false"><a href="#">Friends</a></li>
         <li data-icon="false"><a href="#">Matches</a></li>
     </ul>
@@ -65,10 +65,7 @@
 
     <div role="main" class="ui-content">
         <div class="ui-grid-b ui-responsive">
-            <div class="ui-block-a" style="width: 10%"></div>
-
-            <div class="ui-block-b "><img src="" class="bigimg circle"></div>
-            <div class="ui-block-c" style="width: 10%"></div>
+            <div style="margin-left: auto;" ><img src="" class="bigimg circle"></div>
         </div><br>
         <div class="ui-grid-a">
             <div class="ui-block-a" style="width:80%;">
@@ -193,28 +190,98 @@
         </div>
     </div>
 </div>
-<div data-role="page" id="APS">
+<div data-role="page" id="Profile" data-theme="b">
     <div data-role="header">
-        <a href="#HM" data-icon="home" data-theme="b">Home</a>
-        <h1>A propos</h1>
-        <a href="" data-icon="arrow-r" data-rel="back">Previous</a>
+        <a href="#SideMenu" data-icon="bars" data-iconpos="notext" style="border: none;"></a>
+        <h1>Profile</h1>
+        <a href="" data-icon="edit" data-rel="back" data-iconpos="notext" style="border: none;"></a>
     </div>
     <div role="main" class="ui-content">
-        <!--            <p> This is the Second page to show </p>
-                    <p> <a href="#st" id="goback" class="ui-btn ui-shadow ui-corner-all"> Click here to go to one</a></p>-->
-        <div><span >Version : </span><span data-inline="true" id="version">0</span></div>
-        <div><span >Système : </span><span id="Système">Android</span></div>
-        <div><span >Auteur : </span><span id="Auteur">MR X=10</span></div>
-        <div><span >Page Web : </span><span id="Page"><a href="#">www.mapage.com</a></span></div>
-
+        <div style="margin-left: auto;"><img src="" class="bigimg circle"></div>
     </div>
-    <div data-role="footer" data-position="fixed">
-        <div data-role="navbar">
-            <ul>
-                <li><a href="#CT">Contact</a></li>
-                <li><a href="#EMP">Emplacement</a></li>
-                <li><a href="#APS">A propos</a></li>
-            </ul>
+    <div>
+        <div data-role="controlgroup">
+            <div data-role="collapsible" data-content-theme="b" data-theme="a" data-collapsed="false" data-collapsed-icon="user" data-expanded-icon="user">
+                <h3 style="text-align: center;">User Personal Information</h3>
+                <div data-role="controlgroup">
+                    <ul data-role="listview" data-inset="false">
+                        <li style=""><a href="#" class="ui-btn ui-btn-icon-left ui-icon-info" >Your name here</a></li>
+                        <li style=""><a href="#" class="ui-btn ui-btn-icon-left ui-icon-mail" >Your Email here</a></li>
+                        <li style=""><a href="#" class="ui-btn ui-btn-icon-left ui-icon-phone" >Your phone number here</a></li>
+                        <li style=""><a href="#" class="ui-btn ui-btn-icon-left ui-icon-location" >Your local address here</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="collapsible" data-content-theme="b" data-theme="a" data-collapsed="false" data-collapsed-icon="star" data-expanded-icon="star">
+                <h3 style="text-align: center;">User Match Information</h3>
+                            <!--<div data-role="collapsible">
+                                <h3>Latest attended matches</h3>
+                                <ul data-role="listview" data-inset="false">
+                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 1</a></li>
+                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 2</a></li>
+                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 3</a></li>
+                                </ul>
+                            </div>
+                            <div data-role="collapsible">
+                                <h3>Matches played together</h3>
+                                <ul data-role="listview" data-inset="false">
+                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 1</a></li>
+                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 2</a></li>
+                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 3</a></li>
+                                </ul>
+                            </div>
+                            <div data-role="collapsible">
+                                <h3>Your invitations</h3>
+                                <ul data-role="listview" data-inset="false">
+                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 1</a></li>
+                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 2</a></li>
+                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 3</a></li>
+                                </ul>
+                            </div>-->
+                <div data-role="collapsibleset" data-inset="false">
+                    <div data-role="collapsible">
+                        <h3>Latest attended matches</h3>
+                        <ul data-role="listview" data-inset="false">
+                            <li style=""><a href="#" class="ui-btn ui-btn-icon-left " >Match number 1</a></li>
+                            <li style=""><a href="#" class="ui-btn ui-btn-icon-left " >Match number 2</a></li>
+                            <li style=""><a href="#" class="ui-btn ui-btn-icon-left ">Match number 3</a></li>
+                        </ul>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>Matches played together</h3>
+                        <ul data-role="listview" data-inset="false">
+                            <li style=""><a href="#" class="ui-btn ui-btn-icon-left " >Match number 1</a></li>
+                            <li style=""><a href="#" class="ui-btn ui-btn-icon-left " >Match number 2</a></li>
+                            <li style=""><a href="#" class="ui-btn ui-btn-icon-left ">Match number 3</a></li>
+                        </ul>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>Your invitations</h3>
+                        <ul data-role="listview" data-inset="false">
+                            <li style=""><a href="#" class="ui-btn ui-btn-icon-left " >Match number 1</a></li>
+                            <li style=""><a href="#" class="ui-btn ui-btn-icon-left " >Match number 2</a></li>
+                            <li style=""><a href="#" class="ui-btn ui-btn-icon-left ">Match number 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" style="padding: 0;">
+        <div class="ui-grid-b" style="">
+            <div class="ui-block-a" style="width: 20%; padding-top: 0.5%; padding-left: 0.5%; padding-bottom: 0;">
+                <img class="smallimg" src="" name="profileImg" style="">
+            </div>
+            <div class="ui-block-b" style="width: 60%;">
+                <div name="UserName" class="SSP">YOUR NAME HERE</div>
+                <div name="LastActivity" class="SSP">LAST VALIDATED ACTIVITY</div>
+            </div>
+            <div class="ui-block-c" style="width: 20%;">
+                <input type="button" data-iconpos="notext" data-icon="alert" class="NotificationAlertON" style="border: none;">
+            </div>
         </div>
     </div>
 

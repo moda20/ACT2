@@ -387,7 +387,7 @@ html .ui-bar-b .ui-bar-inherit,
 html .ui-body-b .ui-bar-inherit,
 html body .ui-group-theme-b .ui-bar-inherit {
 	background-color: #E50B45 /*{b-bar-background-color}*/;
-	border-color: #E50B45 /*{b-bar-border}*/;
+	border-color: #7d0625 /*{b-bar-border}*/;
 	color: #ffffff /*{b-bar-color}*/;
 	text-shadow: 0 /*{b-bar-shadow-x}*/  /*{b-bar-shadow-y}*/ 0 /*{b-bar-shadow-radius}*/ #444444 /*{b-bar-shadow-color}*/;
 	font-weight: bold;
@@ -400,8 +400,8 @@ html body .ui-group-theme-b .ui-bar-inherit {
 .ui-overlay-b,
 .ui-page-theme-b,
 .ui-page-theme-b .ui-panel-wrapper {
-	background-color: #f9f9f9 /*{b-page-background-color}*/;
-	border-color: #bbbbbb /*{b-page-border}*/;
+	background-color: #f8d8dc /*{b-page-background-color}*/;
+	border-color: #f8d8dc /*{b-page-border}*/;
 	color: #333333 /*{b-page-color}*/;
 	text-shadow: 0 /*{b-page-shadow-x}*/  /*{b-page-shadow-y}*/ 0 /*{b-page-shadow-radius}*/ #030202 /*{b-page-shadow-color}*/;
 }
@@ -413,7 +413,7 @@ html .ui-body-b .ui-body-inherit,
 html body .ui-group-theme-b .ui-body-inherit,
 html .ui-panel-page-container-b {
 	background-color: #F2B098 /*{b-body-background-color}*/;
-	border-color: #F2B098 /*{b-body-border}*/;
+	border-color: #856053 /*{b-body-border}*/;
 	color: #000000 /*{b-body-color}*/;
 	text-shadow: 0 /*{b-body-shadow-x}*/  /*{b-body-shadow-y}*/ 0 /*{b-body-shadow-radius}*/ #b21515 /*{b-body-shadow-color}*/;
 }
