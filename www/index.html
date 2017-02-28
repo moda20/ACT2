@@ -41,7 +41,10 @@
 
 </head>
 <body>
-<div data-role="panel" id="SideMenu" data-position="left" data-display="overlay" data-theme="a">
+<div data-role="panel" id="NewFriend" data-position="right" data-display="push">
+
+</div>
+<div data-role="panel" id="SideMenu" data-position="left" data-display="overlay">
     <ul data-role="listview" data-inset="false">
         <div class="miniInfo">
             <img src="" class="miniimg">
@@ -51,7 +54,7 @@
         <li data-icon="gear"><a href="">Application settings</a></li>
         <li data-icon="info" data-role="list-divider">Quick Navigation</li>
         <li data-icon="false"><a href="#Profile">Me</a></li>
-        <li data-icon="false"><a href="#">Friends</a></li>
+        <li data-icon="false"><a href="#friends">Friends</a></li>
         <li data-icon="false"><a href="#">Matches</a></li>
     </ul>
 </div>
@@ -214,30 +217,6 @@
             </div>
             <div data-role="collapsible" data-content-theme="b" data-theme="a" data-collapsed="false" data-collapsed-icon="star" data-expanded-icon="star">
                 <h3 style="text-align: center;">User Match Information</h3>
-                            <!--<div data-role="collapsible">
-                                <h3>Latest attended matches</h3>
-                                <ul data-role="listview" data-inset="false">
-                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 1</a></li>
-                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 2</a></li>
-                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 3</a></li>
-                                </ul>
-                            </div>
-                            <div data-role="collapsible">
-                                <h3>Matches played together</h3>
-                                <ul data-role="listview" data-inset="false">
-                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 1</a></li>
-                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 2</a></li>
-                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 3</a></li>
-                                </ul>
-                            </div>
-                            <div data-role="collapsible">
-                                <h3>Your invitations</h3>
-                                <ul data-role="listview" data-inset="false">
-                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 1</a></li>
-                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 2</a></li>
-                                    <li><a href="#" class="ui-btn ui-btn-icon-left">Match number 3</a></li>
-                                </ul>
-                            </div>-->
                 <div data-role="collapsibleset" data-inset="false">
                     <div data-role="collapsible">
                         <h3>Latest attended matches</h3>
@@ -285,6 +264,61 @@
         </div>
     </div>
 
+</div>
+<div data-role="page" data-theme="b" id="friends">
+    <div data-role="header">
+        <a href="#SideMenu" data-icon="bars" data-iconpos="notext" style="border: none;"></a>
+        <h1>Friends</h1>
+        <a href="" data-icon="plus" data-rel="back" data-iconpos="notext" style="border: none;"></a>
+    </div>
+    <div data-role="main" class="ui-content" style="padding: 0.2%;">
+        <ul data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true" data-filter-reveal="true" data-filter="true">
+            <li><a href="#"><img src="css/img/defaultUser.jpg"><h2>Mr. Hana</h2><div data-role="controlgroup" data-type="horizontal">
+                <input type="button" value="Add" data-icon="plus" data-iconpos="left">
+                <input type="button" value="Contact" data-icon="comment" data-iconpos="notext">
+            </div></a>
+                <a href="#" data-rel="" data-position-to="">Settings</a>
+            </li>
+        </ul>
+        <ul data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true">
+            <li><a href="#"><img src="css/img/defaultUser.jpg"><h2>Mr. Armestrong</h2><div data-role="controlgroup" data-type="horizontal">
+                <input type="button" value="Add" data-icon="plus" data-iconpos="left">
+                <input type="button" value="Contact" data-icon="comment" data-iconpos="notext">
+            </div></a>
+                <a href="#" data-rel="" data-position-to="">Settings</a>
+            </li>
+        </ul>
+        <ul data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true">
+            <li><a href="#"><img src="css/img/mahdismida.jpg"><h2>Mahdi Smida</h2><div data-role="controlgroup" data-type="horizontal">
+                <input type="button" value="Add" data-icon="plus" data-iconpos="left">
+                <input type="button" value="Contact" data-icon="comment" data-iconpos="notext">
+            </div></a>
+                <a href="#" data-rel="" data-position-to="">Settings</a>
+            </li>
+        </ul>
+        <ul data-role="listview" data-split-icon="gear" data-split-theme="a" data-inset="true">
+            <li><a href="#"><img src="css/img/NassimChihaoui.jpg"><h2>Nassim Chihaoui</h2><div data-role="controlgroup" data-type="horizontal">
+                <input type="button" value="Add" data-icon="plus" data-iconpos="left">
+                <input type="button" value="Contact" data-icon="comment" data-iconpos="notext">
+            </div></a>
+                <a href="#" data-rel="" data-position-to="">Settings</a>
+            </li>
+        </ul>
+    </div>
+    <div data-role="footer" data-position="fixed" style="padding: 0;">
+        <div class="ui-grid-b" style="">
+            <div class="ui-block-a" style="width: 20%; padding-top: 0.5%; padding-left: 0.5%; padding-bottom: 0;">
+                <img class="smallimg" src="" name="profileImg" style="">
+            </div>
+            <div class="ui-block-b" style="width: 60%;">
+                <div name="UserName" class="SSP">YOUR NAME HERE</div>
+                <div name="LastActivity" class="SSP">LAST VALIDATED ACTIVITY</div>
+            </div>
+            <div class="ui-block-c" style="width: 20%;">
+                <input type="button" data-iconpos="notext" data-icon="alert" class="NotificationAlertON" style="border: none;">
+            </div>
+        </div>
+    </div>
 </div>
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
